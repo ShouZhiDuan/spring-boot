@@ -11,7 +11,10 @@ public class BootStudyApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(BootStudyApplication.class, args);
         String[] beanNamesForType = run.getBeanNamesForType(User.class);
-        System.out.println(beanNamesForType);
+        //遍历所有User.class类型的bean的名称
+        for (String name : beanNamesForType){
+            System.out.println(name);
+        }
     }
 
 }
