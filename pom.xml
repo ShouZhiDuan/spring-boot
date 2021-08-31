@@ -13,6 +13,8 @@
     <groupId>com.springboot.dsz</groupId>
     <artifactId>spring-boot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
 
     <modelVersion>4.0.0</modelVersion>
     <name>spring-boot</name>
@@ -56,8 +58,8 @@
     </dependencyManagement>
 
 
-
     <build>
+        <!--以下会应用到各个子模块中-->
         <pluginManagement>
             <plugins>
                 <plugin>
