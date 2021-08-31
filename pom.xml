@@ -18,6 +18,10 @@
     <name>spring-boot</name>
     <description>Spring Boot学习笔记</description>
 
+    <modules>
+        <module>boot-study</module>
+    </modules>
+
 
     <!--全局版本管理-->
     <properties>
