@@ -1,11 +1,13 @@
 package com.springboot.dsz;
 
 import com.springboot.dsz.dto.User;
+import com.springboot.dsz.import_demo.EnableUserByImportSelector;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
+@EnableUserByImportSelector(exclude = User.class)
 public class BootStudyApplication {
 
     public static void main(String[] args) {
