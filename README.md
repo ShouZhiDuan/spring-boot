@@ -10,3 +10,6 @@
 
 ## @Configuration的用法
 * com.springboot.dsz.configuration
+
+## SpringBoot SPI自定义实现starter组件
+* 参考子模块starter-my-login实现
