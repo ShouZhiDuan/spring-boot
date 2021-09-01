@@ -23,6 +23,7 @@ public class BootStudyApplication {
         Class clazz;
         clazz = LoginServiceImpl.class;
         //clazz = User.class;
+        //查看相关bean
         String[] beanNamesForType = run.getBeanNamesForType(clazz);
         System.out.println(beanNamesForType.length);
         for (String name : beanNamesForType){
