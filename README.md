@@ -13,3 +13,4 @@
 
 ## SpringBoot SPI自定义实现starter组件
 * 参考子模块starter-my-login实现
+* 重点resources/META-INF/spring.factories文件
