@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
     <parent>
         <groupId>com.springboot.dsz</groupId>
         <artifactId>spring-boot</artifactId>
@@ -8,32 +9,30 @@
     </parent>
 
 
-    <groupId>com.springboot.dsz</groupId>
-    <artifactId>boot-study</artifactId>
+    <groupId>com.starter.login</groupId>
+    <artifactId>starter-my-login</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
 
     <modelVersion>4.0.0</modelVersion>
-    <name>boot-study</name>
-    <description>Spring Boot主功能学习</description>
+    <name>starter-my-login</name>
+    <description>自定义实现SpringBoot自动装配模块</description>
 
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
+            <scope>provided</scope>
         </dependency>
-        <!--引入登录模块-->
         <dependency>
-            <groupId>com.starter.login</groupId>
-            <artifactId>starter-my-login</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.9</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
+
 
 </project>
