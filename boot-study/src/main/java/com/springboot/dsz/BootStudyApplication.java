@@ -12,8 +12,11 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 
 @SpringBootApplication
+/**指定扫描包路径*/
 //@ComponentScan(value = {"com.starter.login.service.impl"})
+/**自定义初始化组件*/
 @EnableUserByImportSelector(exclude = User.class)
+/**加载子模块配置文件*/
 @PropertySource(value = {"application_login.properties"})
 public class BootStudyApplication {
 
@@ -23,7 +26,7 @@ public class BootStudyApplication {
         Class clazz;
         clazz = LoginServiceImpl.class;
         //clazz = User.class;
-        //查看相关bean
+        //1、查看相关bean
         String[] beanNamesForType = run.getBeanNamesForType(clazz);
         System.out.println(beanNamesForType.length);
         for (String name : beanNamesForType){
@@ -31,7 +34,7 @@ public class BootStudyApplication {
             LoginService loginService = (LoginService) beanFactory.getBean(name, clazz);
             loginService.login();
         }
-        //跨模块环境变量
+        //2、跨模块环境变量
         String property = run.getEnvironment().getProperty("starter.key");
         System.out.println(property);
     }
