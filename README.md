@@ -16,4 +16,6 @@
 * 重点resources/META-INF/spring.factories文件
 
 
-## 五、to do ......
+## 五、JDK动态代理
+* com.springboot.dsz.invocation
+* com.springboot.dsz.invocation.ProxyTestMain
