@@ -2,8 +2,10 @@ package com.springboot.dsz;
 
 import com.springboot.dsz.dto.User;
 import com.springboot.dsz.import_demo.EnableUserByImportSelector;
+import com.springboot.dsz.service.TestService;
 import com.starter.login.service.LoginService;
 import com.starter.login.service.impl.LoginServiceImpl;
+import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -37,6 +39,12 @@ public class BootStudyApplication {
         //2、跨模块环境变量
         String property = run.getEnvironment().getProperty("starter.key");
         System.out.println(property);
+        //3、TestService.class
+        //TestService bean = beanFactory.getBean(TestService.class);
+        //BeanDefinition beanDefinition = beanFactory.getBeanDefinition("com.springboot.dsz.service.TestService");
+        String[] beanDefinitionNames = beanFactory.getBeanDefinitionNames();
+        String[] beanNamesForType1 = beanFactory.getBeanNamesForType(TestService.class);
+        System.out.println();
     }
 
 }
