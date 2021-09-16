@@ -24,3 +24,6 @@
 ## 六、Spring Data JPA
 ### 1、实现JPA实体数据converter
 * com.springboot.dsz.spring_data_jpa.converters.UsersAddressToStringConverter
+
+## 七、BeanDefinition的用法
+* com.springboot.dsz.bean_definition.BeanDefinitionTeatMain
