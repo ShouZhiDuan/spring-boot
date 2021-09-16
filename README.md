@@ -19,3 +19,8 @@
 ## 五、JDK动态代理
 * com.springboot.dsz.invocation
 * com.springboot.dsz.invocation.ProxyTestMain
+
+
+## 六、Spring Data JPA
+### 1、实现JPA实体数据converter
+* com.springboot.dsz.spring_data_jpa.converters.UsersAddressToStringConverter

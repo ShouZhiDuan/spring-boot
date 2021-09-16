@@ -14,13 +14,19 @@ public class MyConfiguration1 {
 
     @Bean
     public User user1(){
-        return new User("name1","addr1");
+        User user = new User();
+        user.setName("name1");
+        user.setAddr("addr1");
+        return user;
     }
 
     @Bean
     @Primary //表示：同一类型的bean默认杯注入的标记
     public User user2(){
-        return new User("name2","addr2");
+        User user = new User();
+        user.setName("name2");
+        user.setAddr("addr2");
+        return user;
     }
 
 }
