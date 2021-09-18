@@ -1,11 +1,9 @@
 package com.springboot.dsz.spring_data_jpa.entity;
 
 import com.springboot.dsz.dto.Address;
-import com.springboot.dsz.spring_data_jpa.converters.UsersAddressToStringConverter;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import javax.persistence.*;
 
 /**

@@ -6,6 +6,7 @@ import com.springboot.dsz.service.TestService;
 import com.springboot.dsz.spring_data_jpa.repository.UsersRepository;
 import com.starter.login.service.LoginService;
 import com.starter.login.service.impl.LoginServiceImpl;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.boot.SpringApplication;
@@ -14,7 +15,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
-
+@Slf4j
 @SpringBootApplication
 /**指定扫描包路径*/
 //@ComponentScan(value = {"com.starter.login.service.impl"})
@@ -47,7 +48,7 @@ public class BootStudyApplication {
         //BeanDefinition beanDefinition = beanFactory.getBeanDefinition("com.springboot.dsz.service.TestService");
         String[] beanDefinitionNames = beanFactory.getBeanDefinitionNames();
         String[] beanNamesForType1 = beanFactory.getBeanNamesForType(TestService.class);
-        System.out.println();
+        log.error("======启动完成======");
     }
 
 }
