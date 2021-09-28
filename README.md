@@ -33,3 +33,5 @@
 
 ## 九、SpringBoot集成Protobuf
 * com.springboot.dsz.cotroller.ProtobufTestController
+* 参考：https://blog.csdn.net/yanshaoshuai/article/details/103824463
+* 参考：https://www.shuzhiduo.com/A/A2dmwVvnJe/
