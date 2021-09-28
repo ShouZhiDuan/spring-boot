@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.springboot.dsz.proto_dto";
+option java_outer_classname = "MessageUser";
+
+message MessageUserLogin {
+    string pswd = 1;
+    string username = 2;
+}

@@ -30,3 +30,6 @@
 
 ## 八、常用的工具类
 * com.springboot.dsz.utils
+
+## 九、SpringBoot集成Protobuf
+* com.springboot.dsz.cotroller.ProtobufTestController

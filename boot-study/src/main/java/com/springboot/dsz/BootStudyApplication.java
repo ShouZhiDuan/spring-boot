@@ -15,6 +15,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
+import org.springframework.http.converter.HttpMessageConverter;
+
+import java.util.Map;
+
 @Slf4j
 @SpringBootApplication
 /**指定扫描包路径*/
@@ -43,12 +47,17 @@ public class BootStudyApplication {
         //2、跨模块环境变量
         String property = run.getEnvironment().getProperty("starter.key");
         System.out.println(property);
+
         //3、TestService.class
         //TestService bean = beanFactory.getBean(TestService.class);
         //BeanDefinition beanDefinition = beanFactory.getBeanDefinition("com.springboot.dsz.service.TestService");
         String[] beanDefinitionNames = beanFactory.getBeanDefinitionNames();
         String[] beanNamesForType1 = beanFactory.getBeanNamesForType(TestService.class);
         log.error("======启动完成======");
+
+        //4、消息转换器
+        Map<String, HttpMessageConverter> beansOfType = beanFactory.getBeansOfType(HttpMessageConverter.class);
+        System.out.println(beansOfType);
     }
 
 }

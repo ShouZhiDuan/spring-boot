@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+option java_package = "com.springboot.dsz.proto_dto";
+option java_outer_classname = "MessageOrder";
+
+message Order {
+    string name = 1;
+    string count = 2;
+}
