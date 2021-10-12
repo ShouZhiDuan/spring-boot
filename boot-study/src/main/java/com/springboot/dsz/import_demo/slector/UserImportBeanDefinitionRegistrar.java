@@ -16,8 +16,6 @@ public class UserImportBeanDefinitionRegistrar implements ImportBeanDefinitionRe
     public void registerBeanDefinitions(AnnotationMetadata annotationMetadata, BeanDefinitionRegistry beanDefinitionRegistry) {
         Class beanClass = User.class;
         RootBeanDefinition beanDefinition = new RootBeanDefinition(beanClass);
-
-
         String beanName = StringUtils.uncapitalize(beanClass.getSimpleName());
         //这些registerBeanDefinition中的bean将被初始化到容器中
         beanDefinitionRegistry.registerBeanDefinition(beanName,beanDefinition);
